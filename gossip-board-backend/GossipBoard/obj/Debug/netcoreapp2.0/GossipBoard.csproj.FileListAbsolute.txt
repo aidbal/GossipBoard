@@ -1,0 +1,11 @@
+C:\Users\Aidas\Dropbox\STUDIJOS\7 semesteras\Saityno taikomųjų programų projektavimas\Projektas\gossip-board-backend\GossipBoard\bin\Debug\netcoreapp2.0\GossipBoard.deps.json
+C:\Users\Aidas\Dropbox\STUDIJOS\7 semesteras\Saityno taikomųjų programų projektavimas\Projektas\gossip-board-backend\GossipBoard\bin\Debug\netcoreapp2.0\GossipBoard.runtimeconfig.json
+C:\Users\Aidas\Dropbox\STUDIJOS\7 semesteras\Saityno taikomųjų programų projektavimas\Projektas\gossip-board-backend\GossipBoard\bin\Debug\netcoreapp2.0\GossipBoard.runtimeconfig.dev.json
+C:\Users\Aidas\Dropbox\STUDIJOS\7 semesteras\Saityno taikomųjų programų projektavimas\Projektas\gossip-board-backend\GossipBoard\bin\Debug\netcoreapp2.0\GossipBoard.dll
+C:\Users\Aidas\Dropbox\STUDIJOS\7 semesteras\Saityno taikomųjų programų projektavimas\Projektas\gossip-board-backend\GossipBoard\obj\Debug\netcoreapp2.0\GossipBoard.csprojResolveAssemblyReference.cache
+C:\Users\Aidas\Dropbox\STUDIJOS\7 semesteras\Saityno taikomųjų programų projektavimas\Projektas\gossip-board-backend\GossipBoard\obj\Debug\netcoreapp2.0\GossipBoard.csproj.CoreCompileInputs.cache
+C:\Users\Aidas\Dropbox\STUDIJOS\7 semesteras\Saityno taikomųjų programų projektavimas\Projektas\gossip-board-backend\GossipBoard\obj\Debug\netcoreapp2.0\GossipBoard.AssemblyInfoInputs.cache
+C:\Users\Aidas\Dropbox\STUDIJOS\7 semesteras\Saityno taikomųjų programų projektavimas\Projektas\gossip-board-backend\GossipBoard\obj\Debug\netcoreapp2.0\GossipBoard.AssemblyInfo.cs
+C:\Users\Aidas\Dropbox\STUDIJOS\7 semesteras\Saityno taikomųjų programų projektavimas\Projektas\gossip-board-backend\GossipBoard\bin\Debug\netcoreapp2.0\GossipBoard.pdb
+C:\Users\Aidas\Dropbox\STUDIJOS\7 semesteras\Saityno taikomųjų programų projektavimas\Projektas\gossip-board-backend\GossipBoard\obj\Debug\netcoreapp2.0\GossipBoard.dll
+C:\Users\Aidas\Dropbox\STUDIJOS\7 semesteras\Saityno taikomųjų programų projektavimas\Projektas\gossip-board-backend\GossipBoard\obj\Debug\netcoreapp2.0\GossipBoard.pdb
