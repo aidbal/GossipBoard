@@ -1,0 +1,22 @@
+<div class="container-element full-width">
+  <h5 *ngIf="headsUpMessage">{{ headsUpMessage }}</h5>
+  <form [ngClass]="{'auth-fail': !authFlagForAnimation }" class="form-signin" #f="ngForm" (ngSubmit)="signIn(f.value)">
+  <h2 class="form-signin-heading noselect">Please sign in</h2>
+
+  <div *ngIf="!authenticationFlag" class="alert alert-danger">
+    Invalid username and/or password.
+  </div>
+
+  <md-input-container class="full-width">
+    <input type="email" id="inputEmail" name="email" ngModel mdInput placeholder="Email" />
+  </md-input-container>
+
+  <md-input-container class="full-width">
+    <input  type="password" id="inputPassword" name="password" ngModel mdInput placeholder="Password" />
+  </md-input-container>
+
+  <br>
+  <button md-raised-button color="primary" type="submit">Sign in</button>
+  <button  class="close-button" md-raised-button type="button" (click)="redirectToRegister()">Register</button>
+</form>
+</div>

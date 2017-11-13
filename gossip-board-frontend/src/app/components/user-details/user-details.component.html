@@ -1,0 +1,13 @@
+<div *ngIf="this?.userService.getCurrentUser()">
+  <h4>Current User</h4>
+  <div class="info-container">
+    <p>Name: {{ this?.userService.getCurrentUser()?.Firstname }} {{ this?.userService.getCurrentUser()?.Lastname }}</p>
+    <p class="email">Email: {{ this?.userService.getCurrentUser()?.Email }}</p>
+  </div>
+  <p class="logout-button-container">
+    <button class="logout-button" md-button (click)="onLogOutClick()">Logout</button>
+  </p>
+</div>
+<div *ngIf="!this?.userService.getCurrentUser()">
+  <h3>Not logged in!</h3>
+</div>

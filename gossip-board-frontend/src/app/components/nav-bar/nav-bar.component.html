@@ -1,0 +1,30 @@
+<md-toolbar color="theme" class="nav-bar">
+  <span class="nav-bar-tittle noselect">Yellow and Black</span>
+  <md-input-container *ngIf="this?.userService?.isLoggedIn()" class="nav-bar-search mat-accent" floatPlaceholder="never" color="accent">
+    <input id="mainSearch" title="Search" type="search"
+           (change)="onSearchFieldChange(this)" [(ngModel)]="searchField"  mdInput/>
+    <md-icon mdSuffix="" class="nav-bar-icon icon24 noselect">search</md-icon>
+  </md-input-container>
+  <button md-raised-button id="createPostButton" *ngIf="this?.userService?.isLoggedIn()" (click)="openDialog()">Create Post</button>
+  <span class="nav-bar-spacer"></span>
+  <a *ngIf="this?.userService?.isLoggedIn()" class="nav-bar-menuButton noselect" (click)="sidenav.toggle()" title="User settings">
+    <span class="icon24 hamburger-icon-group">
+      <md-icon class="nav-bar-icon">face</md-icon>
+      <md-icon class="nav-bar-icon">menu</md-icon>
+    </span>
+  </a>
+</md-toolbar>
+
+<md-sidenav-container class="content">
+
+  <md-sidenav #sidenav mode="push" align="end" class="sidenav noselect">
+    <app-user-details [sidenav]="sidenav"></app-user-details>
+    <hr>
+  </md-sidenav>
+
+  <div class="page-content">
+    <!--Router is supposed to spit out the components here, so that the-->
+    <!--sidenav can push the content around-->
+    <router-outlet></router-outlet>
+  </div>
+</md-sidenav-container>

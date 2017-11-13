@@ -1,0 +1,136 @@
+@import '~@angular/material/theming';
+
+/*
+  For adjusting the components color
+  or maybe extract the colors form material theme (?)
+ */
+
+$del_color_active: #dd2222;
+$icon_color_active: white;
+$action_buttons_color: darkred;
+$voted_icon_color: pink;
+
+$del_color: darken($del_color_active, 15%);
+$icon_color: darken($icon_color_active, 15%);
+
+.card-spacer {
+  flex: 1 1 auto;
+}
+
+.card-remove {
+  box-shadow: -2px 2px 5px -3px rgba(0, 0, 0, 0.75);
+  transition: color .1s, background-color 0.1s, box-shadow 0.1s;
+  background-color: $del_color;
+  color: $icon_color;
+
+  cursor: pointer;
+  border-radius: 1px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-right: -24px;
+  margin-top: -24px;
+  width: 32px;
+  height: 32px;
+}
+
+.card-remove:hover {
+  box-shadow: -2px 2px 16px -4px rgba(0, 0, 0, 0.6);
+  color: $icon_color_active;
+  background-color: $del_color_active;
+  text-shadow: 0 0 20px $icon_color_active;
+}
+
+md-card-actions {
+  cursor: default;
+}
+
+md-card-actions.card-actions-container {
+  display: flex;
+  margin: 0;
+}
+
+md-card-actions > .card-actions-panel {
+  box-shadow: -2px -2px 5px -3px rgba(0, 0, 0, 0.75);
+  height: 32px;
+  background-color: $action_buttons_color;
+  color: $icon_color;
+  margin-bottom: -8px;
+  margin-right: -24px;
+  padding: 0 4px;
+  border-top-left-radius: 16px;
+}
+
+.card-rating-container {
+  box-shadow: -2px -2px 2px -3px rgba(0, 0, 0, 0.75);
+  margin-top: 8px;
+  margin-bottom: -8px;
+  background-color: $action_buttons_color;
+  color: $icon_color;
+  margin-right: -4px;
+  height: 24px;
+  border-top-left-radius: 8px;
+  display: flex;
+}
+
+.card-rating {
+  margin-left: 4px;
+  margin-right: 8px;
+  align-self: center;
+}
+
+/**
+  The card decreases in width by 8px @600px screen width
+ */
+@media screen and (max-width: 600px) {
+  .card-remove {
+    margin-right: -16px;
+  }
+  md-card-actions > .card-actions-panel {
+    margin-right: -16px;
+  }
+}
+
+.card-actions-panel > md-icon {
+  cursor: pointer;
+  align-self: center;
+  padding-right: 8px;
+  font-size: 32px;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+.card-actions-panel > md-icon:hover {
+  color: $icon_color_active;
+  text-shadow: 0 0 20px $icon_color_active;
+}
+
+.card-actions-panel > md-icon.voted {
+  text-shadow: 0 0 20px $voted_icon_color;
+  color: $voted_icon_color;
+}
+.card-remove{
+  text-decoration: none;
+}
+.card-remove > md-icon {
+  margin: auto;
+}
+
+md-card.card {
+  align-self: center;
+  margin: 8px;
+  width: 400px; // on small screens the card should take up most of the width
+}
+
+
+@media screen and (min-width: 960px) and (max-width: 1270px) {
+  md-card.card{
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 1271px) {
+  md-card.card{
+    width: 560px;
+  }
+}
+

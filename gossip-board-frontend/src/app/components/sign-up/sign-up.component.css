@@ -1,0 +1,61 @@
+.signUp-form{
+  top: 7%;
+  position: absolute;
+  width: 450px;
+  left: calc(50% - 225px);
+  border-radius: 8px;
+  padding: 24px;
+  background-color: #f6f7ff;
+  /*border: thin solid blueviolet;*/
+  box-shadow: 0px 0px 13px -4px rgba(0,0,0,0.75);
+
+}
+.close-button{ float: right;}
+.validation-error{
+  color:red;
+  position: absolute;
+  padding:5px;
+}
+.validation-error-container{
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.container-element{
+  top: 12%;
+  left: 0;
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  background-color: #eeeeee;
+  box-shadow: 0px 0px 30px 30px #eeeeee;
+}
+
+.auth-container{
+  transition: margin-bottom 0.2s;
+}
+
+.bottom-spacer{
+  margin-bottom: 28px;
+}
+
+
+.bottom-spacer-large{
+  margin-bottom: 48px;
+}
+
+.auth-fail{
+  animation: shake 0.43s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  0% {transform: translate3d(-1px, 0, 0);}
+  25% {transform: translate3d(3px, 0, 0);}
+  50% {transform: translate3d(-4px, 0, 0);}
+  75% {transform: translate3d(3px, 0, 0);}
+  100% {transform: translate3d(-1px, 0, 0);}
+}
+

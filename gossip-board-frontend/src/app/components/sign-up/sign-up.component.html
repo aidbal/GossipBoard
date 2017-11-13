@@ -1,0 +1,46 @@
+<div class="container-element">
+  <div class='signUp-form' [ngClass]="{'auth-fail': this.shakeValidError}">
+    <md-card-title>
+      Registration
+    </md-card-title>
+
+    <form novalidate [formGroup]='form'>
+
+      <div class="auth-container" [ngClass]="{'bottom-spacer':(email.touched && email.invalid)}">
+        <md-input-container>
+          <input mdInput formControlName="email" placeholder="Email"/>
+        </md-input-container>
+
+        <div class="validation-error-container" *ngIf="email.touched && email.invalid" class="validation-error">
+          Enter a valid email address.
+        </div>
+      </div>
+
+      <div>
+        <md-input-container><input mdInput formControlName="name" placeholder="First Name"/></md-input-container>
+        <md-input-container><input mdInput formControlName="lastname" placeholder="Lastname"/></md-input-container>
+      </div>
+
+      <div class="auth-container" [ngClass]="{'bottom-spacer-large':(password.touched && password.invalid)||(password.valid && form.invalid && form.errors.passwordsMatch && confirm.touched)}">
+        <div class="validation-error-container">
+          <md-input-container><input mdInput formControlName="password" type="password" placeholder="Password"/>
+          </md-input-container>
+          <p *ngIf="password.touched && password.invalid" class="validation-error">
+            Password too short </p>
+          <md-input-container><input mdInput formControlName="confirm" type="password" placeholder="Password confirm"/>
+          </md-input-container>
+          <p *ngIf="password.valid && form.invalid && form.errors.passwordsMatch && confirm.touched"
+               class="validation-error">
+            Passwords do not match.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <button (click)='onFormSubmit()' md-raised-button color="primary">Create Account</button>
+        <button (click)='goBackToLogin()' md-raised-button class="close-button" >Back</button>
+      </div>
+    </form>
+
+  </div>
+</div>

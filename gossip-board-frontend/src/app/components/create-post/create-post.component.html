@@ -1,0 +1,21 @@
+<form #f="ngForm" (ngSubmit)="submitPost(f.value)" novalidate>
+  <div class="center-input">
+    <md-input-container>
+      <input #postTitle name="title" ngModel mdInput autocomplete="off" placeholder="New Post Title" />
+    </md-input-container>
+  </div>
+  <div class="PostTextArea">
+    <textarea #postContent  rows="4" cols="50" ngModel name="text"></textarea>
+  </div>
+  <div *ngIf="this.errors" class="alert alert-danger">
+    Post invalid
+  </div>
+  <div>
+    <button [disabled]="!this.enabled" md-raised-button type="submit" class="submit-button" color="primary">
+      <i class="material-icons">done</i>
+    </button>
+    <button md-raised-button md-dialog-close color="warn" class="close-button">
+      <i class="material-icons">delete</i>
+    </button>
+  </div>
+</form>
